@@ -1,0 +1,54 @@
+{
+  "manifest_version": 1,
+  "id": "travel",
+  "name": "Travel",
+  "version": "0.1.0",
+  "description": "Cheapest-window flight search: give a rough departure/return date and it fans a background search across every nearby date combination to find the cheapest fare, instead of you checking one date pair at a time. Direct Google Flights API access via the fli library — no scraping, no browser.",
+  "icon": "plane",
+  "tier": "inprocess",
+  "requires_ui_refresh": false,
+  "category": "Integrations",
+  "publisher": "TekFlox",
+  "resource_estimate": {
+    "cpu": "low",
+    "memory": "low",
+    "disk": "low"
+  },
+  "runtime": {
+    "python": ">=3.11",
+    "entrypoint": "travel_app.plugin:TravelAppPlugin",
+    "pip_requires": [
+      "flights"
+    ]
+  },
+  "permissions": [],
+  "contributes": {
+    "mcp": {
+      "reload_on_save": false,
+      "provides": [
+        "search_flight_window_start",
+        "search_flight_window_status",
+        "search_flight_window_wait"
+      ]
+    },
+    "skills": [
+      {
+        "id": "aw-travel",
+        "path": "skills/aw-travel/SKILL.md",
+        "description": "Cheapest-date-window flight search through this app's aw-travel MCP server — how to kick off a background search job and poll/wait for results."
+      }
+    ]
+  },
+  "dependencies": {
+    "apps": [
+      {
+        "id": "mcp-gateway",
+        "version": ">=0.1.0",
+        "required": true,
+        "reason": "This app ships a static mcp.json (the 'travel' server) that MCP Gateway discovers and merges; without the gateway no agent can reach its tools."
+      }
+    ],
+    "note": "Runtime-enforced app dependency: aw-workspace loads mcp-gateway before this app so the gateway can scan travel/mcp.json."
+  },
+  "migrations": {}
+}
