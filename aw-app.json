@@ -2,8 +2,8 @@
   "manifest_version": 1,
   "id": "travel",
   "name": "Travel",
-  "version": "0.1.0",
-  "description": "Cheapest-window flight search: give a rough departure/return date and it fans a background search across every nearby date combination to find the cheapest fare, instead of you checking one date pair at a time. Direct Google Flights API access via the fli library — no scraping, no browser.",
+  "version": "0.2.0",
+  "description": "Cheapest-window flight search: give a rough departure/return date and it fans a background search across every nearby date combination to find the cheapest fare, instead of you checking one date pair at a time. Direct Google Flights API access via the fli library \u2014 no scraping, no browser.",
   "icon": "plane",
   "tier": "inprocess",
   "requires_ui_refresh": false,
@@ -35,7 +35,7 @@
       {
         "id": "aw-travel",
         "path": "skills/aw-travel/SKILL.md",
-        "description": "Cheapest-date-window flight search through this app's aw-travel MCP server — how to kick off a background search job and poll/wait for results."
+        "description": "Cheapest-date-window flight search through this app's aw-travel MCP server \u2014 how to kick off a background search job and poll/wait for results."
       }
     ]
   },
