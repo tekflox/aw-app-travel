@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "travel",
   "name": "Travel",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Cheapest-window flight search: give a rough departure/return date and it fans a background search across every nearby date combination to find the cheapest fare, instead of you checking one date pair at a time. Direct Google Flights API access via the fli library \u2014 no scraping, no browser.",
   "icon": "plane",
   "tier": "inprocess",
