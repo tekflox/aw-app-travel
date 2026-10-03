@@ -213,7 +213,7 @@ def _run_search_job(job_id: str, origin, destination, combos, cabin_class, max_s
                     job["stopped_at_combo"] = i
                     return
                 job["combinations_failed"] += 1
-                job["last_error"] = msg
+                job["error"] = msg
         else:
             with _JOBS_LOCK:
                 job["combinations_tried"] = i + 1
