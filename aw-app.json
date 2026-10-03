@@ -18,7 +18,7 @@
     "python": ">=3.11",
     "entrypoint": "travel_app.plugin:TravelAppPlugin",
     "pip_requires": [
-      "flights @ git+https://github.com/punitarani/fli.git@5c092f12e10db925f68768d97cb08cb7fdcbbacc"
+      "flights @ https://github.com/punitarani/fli/archive/5c092f12e10db925f68768d97cb08cb7fdcbbacc.tar.gz"
     ]
   },
   "permissions": [],
